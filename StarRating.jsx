@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import StarIcon from '@material-ui/icons/Star';
 import StarHalfIcon from '@material-ui/icons/StarHalf';
 import StarBorderIcon from '@material-ui/icons/StarBorder';
@@ -18,6 +19,15 @@ export default function StarRating({ rating }) {
 		}
 		stars.push(<StarIcon key={i} />);
 	}
-	stars.push(<p id="star-rating-total">{rating}</p>);
+	stars.push(
+		<p id="star-rating-total" key={'star-rating-total'}>
+			{rating}
+		</p>
+	);
 	return stars;
 }
+
+StarRating.propTypes = {
+	rating: PropTypes.number.isRequired
+};
+

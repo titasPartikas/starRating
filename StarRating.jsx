@@ -18,6 +18,6 @@ export default function StarRating({ rating }) {
 		}
 		stars.push(<StarIcon key={i} />);
 	}
-	stars.push(<p>{rating}</p>);
+	stars.push(<p id="star-rating-total">{rating}</p>);
 	return stars;
 }
